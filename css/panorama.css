@@ -1,0 +1,82 @@
+/*
+	minecraft.uz
+	SPURDOHOOK 2019
+*/
+body {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	perspective: 50vw;
+}
+.panorama-container, .panorama-side {
+	width: 100vw;
+	height: 100vw;
+	position: absolute;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+}
+.panorama-container {
+	z-index: -1;
+	left: 50%;
+	top: 50%;
+	margin: -50vw 0 0 -50vw;
+	transform: translate3d(0px, 0px, 45vw) rotateX(-20deg);
+	-webkit-transform: translate3d(0px, 0px, 45vw) rotateX(-20deg);
+	-moz-transform: translate3d(0px, 0px, 45vw) rotateX(-20deg);
+	animation: spin 180s linear infinite;
+	-webkit-animation: spin 180s linear infinite;
+	-moz-animation: spin 180s linear infinite;
+}
+.panorama-side {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.back {
+	transform: rotateY(180deg) translateZ(-49.9vw);
+	-webkit-transform: rotateY(180deg) translateZ(-49.9vw);
+	-moz-transform: rotateY(180deg) translateZ(-49.9vw);
+	background-image: url(../images/background/panorama_2.png);
+}
+.top {
+	transform: rotateX(-90deg) translateZ(-49.9vw);
+	-webkit-transform: rotateX(-90deg) translateZ(-49.9vw);
+	-moz-transform: rotateX(-90deg) translateZ(-49.9vw);
+	background-image: url(../images/background/panorama_4.png);
+}
+.left {
+	transform: rotateY(90deg) translateZ(-49.9vw);
+	-webkit-transform: rotateY(90deg) translateZ(-49.9vw);
+	-moz-transform: rotateY(90deg) translateZ(-49.9vw);
+	background-image: url(../images/background/panorama_3.png);
+}
+.right {
+	transform: rotateY(-90deg) translateZ(-49.9vw);
+	-webkit-transform: rotateY(-90deg) translateZ(-49.9vw);
+	-moz-transform: rotateY(-90deg) translateZ(-49.9vw);
+	background-image: url(../images/background/panorama_1.png);
+}
+.bottom {
+	transform: rotateX(90deg) translateZ(-49.9vw);
+	-webkit-transform: rotateX(90deg) translateZ(-49.9vw);
+	-moz-transform: rotateX(90deg) translateZ(-49.9vw);
+	background-image: url(../images/background/panorama_5.png);
+}
+.front {
+	transform: translateZ(-49.9vw);
+	-webkit-transform: translateZ(-49.9vw);
+	-moz-transform: translateZ(-49.9vw);
+	background-image: url(../images/background/panorama_0.png);
+}
+
+@keyframes spin {
+	100% {
+		transform: translate3d(0px, 0px, 45vw) rotateX(-20deg) rotateY(360deg);
+		-webkit-transform: translate3d(0px, 0px, 45vw) rotateX(-20deg)rotateY(360deg);
+		-moz-transform: translate3d(0px, 0px, 45vw) rotateX(-20deg) rotateY(360deg);
+		will-change: transform;
+	}
+}

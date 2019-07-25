@@ -1,0 +1,56 @@
+/*
+	minecraft.uz
+	SPURDOHOOK 2019
+*/
+
+.intro-background {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	background-color: white;
+	z-index: 1;
+	animation: fadeout 2.5s linear forwards;
+	-webkit-animation: fadeout 2.5s linear forwards;
+	-moz-animation: fadeout 2.5s linear forwards;
+}
+.intro-container {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	min-width: 50vh;
+	min-height: 50vh;
+	max-width: 50vw;
+	max-height: 50vw;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+.intro-logo, .intro-label {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.intro-logo {
+	height: 8%;
+}
+.intro-label {
+	height: 8%;
+	margin-left: 10px;
+}
+
+@keyframes fadeout {
+	80% {
+		opacity: 1;
+		z-index: 1;
+	}
+	99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	100% {
+		opacity: 0;
+		z-index: -1;
+	}
+}

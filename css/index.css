@@ -1,0 +1,82 @@
+/*
+	minecraft.uz
+	SPURDOHOOK 2019
+*/
+@font-face {
+	font-family: 'Minecraft';
+	src: url('../fonts/minecraft.ttf');
+}
+
+html, body {
+	margin: unset;
+}
+
+body {
+	overflow: hidden;
+	font-family: 'Minecraft';
+	font-size: 2.5vh;
+	text-rendering: optimizeLegibility;
+	text-shadow: 0.3vh 0.3vh 0 rgba(0, 0, 0, 0.5);
+	color: white;
+}
+body:after{
+	position:absolute;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	content: url(../images/button-hover.png) url(../images/button-inactive.png);
+}
+main {
+	opacity: 0;
+	animation: fadein 3s linear forwards;
+	-webkit-animation: fadein 3s linear forwards;
+	-moz-animation: fadein 3s linear forwards;
+}
+
+.logo {
+	display: block;
+	min-width: 350px;
+	width: 60vw;
+	margin: 10vh auto;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: pixelated;
+}
+.button {
+	height: 5.5vh;
+	max-width: 55vh;
+	margin: 5px auto;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: pixelated;
+	line-height: 5.5vh;
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	cursor: pointer;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.button.active {
+	background-image: url(../images/button.png);
+}
+.button.active:hover {
+	background-image: url(../images/button-hover.png);
+	color: #ffffa1;
+}
+.button.inactive {
+	background-image: url(../images/button-inactive.png);
+	color: gray;
+	cursor: unset;
+}
+.audio {
+	margin-top: calc(5.5vh + 10px); 
+}
+
+@keyframes fadein {
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
